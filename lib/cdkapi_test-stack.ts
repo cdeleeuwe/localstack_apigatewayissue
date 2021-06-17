@@ -19,8 +19,6 @@ export class CdkapiTestStack extends cdk.Stack {
       runtime: lambda.Runtime.NODEJS_14_X,
     });
 
-    console.log(__dirname);
-
     const publicLambda = new lambda.Function(this, "PublicLambda", {
       code: lambda.Code.fromAsset(`dist/lambda/public`),
       handler: "index.handler",
