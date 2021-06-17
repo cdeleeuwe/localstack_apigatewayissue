@@ -17,7 +17,15 @@
     "inlineSources": true,
     "experimentalDecorators": true,
     "strictPropertyInitialization": false,
-    "typeRoots": ["./node_modules/@types"]
+    "typeRoots": ["./node_modules/@types"],
+    "outDir": "dist",
+    "rootDir": "./lib"
   },
-  "exclude": ["cdk.out"]
+  "include": [
+    "./lib/lambda/**/*.ts",
+    "./lib/lambda/**/*.json",
+    "./lib/layers/**/*.ts",
+    "./lib/layers/**/*.json"
+  ],
+  "exclude": ["cdk.out", "node_modules"]
 }
